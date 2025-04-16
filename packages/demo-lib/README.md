@@ -6,10 +6,10 @@ Este paquete contiene una colección de componentes Vue.js que son empaquetados 
 
 ```
 src/
-  ├── components/     # Componentes Vue individuales
-  ├── App.vue         # Componente principal para desarrollo
-  ├── main.ts         # Punto de entrada para desarrollo
-  └── wrapper.ts      # Configuración de Web Components
+  ├── components/             # Componentes Vue individuales
+  │   └── index.ts           # Barrel file para la Configuración de Web Components
+  ├── App.vue                # Componente principal para desarrollo
+  └── main.ts                # Punto de entrada para desarrollo
 ```
 
 ## Desarrollo Local
@@ -22,9 +22,9 @@ pnpm run dev
 
 Esto iniciará un servidor de desarrollo que te permitirá ver los componentes en acción.
 
-## Construcción
+## Compilación
 
-Para construir los componentes como Web Components:
+Para compilar los componentes como Web Components:
 
 ```bash
 pnpm run build
@@ -34,7 +34,7 @@ Esto generará los archivos de distribución en el directorio `dist/`.
 
 ## Uso
 
-Una vez construidos, los Web Components pueden ser utilizados en cualquier aplicación web. Por ejemplo:
+Una vez compilados, los Web Components pueden ser utilizados en cualquier aplicación web. Por ejemplo:
 
 ```html
 <script src="path/to/demo-lib.js"></script>
