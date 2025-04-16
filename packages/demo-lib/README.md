@@ -1,5 +1,51 @@
-# Vue 3 + TypeScript + Vite
+# Demo Library - Web Components con Vue.js
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Este paquete contiene una colección de componentes Vue.js que son empaquetados como Web Components (Custom Elements) utilizando Vite. Los componentes están diseñados para ser utilizados en cualquier aplicación web, independientemente del framework.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Estructura del Proyecto
+
+```
+src/
+  ├── components/     # Componentes Vue individuales
+  ├── App.vue         # Componente principal para desarrollo
+  ├── main.ts         # Punto de entrada para desarrollo
+  └── wrapper.ts      # Configuración de Web Components
+```
+
+## Desarrollo Local
+
+Para desarrollar los componentes localmente:
+
+```bash
+pnpm run dev
+```
+
+Esto iniciará un servidor de desarrollo que te permitirá ver los componentes en acción.
+
+## Construcción
+
+Para construir los componentes como Web Components:
+
+```bash
+pnpm run build
+```
+
+Esto generará los archivos de distribución en el directorio `dist/`.
+
+## Uso
+
+Una vez construidos, los Web Components pueden ser utilizados en cualquier aplicación web. Por ejemplo:
+
+```html
+<script src="path/to/demo-lib.js"></script>
+
+<custom-button>Click me!</custom-button>
+```
+
+## Características
+
+- Componentes Vue.js 3 con TypeScript
+- Estilizado con Tailwind CSS
+- Empaquetado como Web Components
+- Soporte para eventos personalizados
+- Estilos encapsulados
