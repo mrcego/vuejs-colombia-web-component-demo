@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Colombia Web Component Playground Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module">
+        import { CustomButtonCE as CustomButton } from "./../demo-lib/dist/vuejs-colombia-web-component-demo-lib.es.js";
+    </script>
+</head>
+<body>
+    <script>
+        function test(color, $event) {
+            $event.stopPropagation();
+            alert(`El color del botón es ${color}`)
+        }
+    </script>
+
+    <div class="flex flex-col h-dvh items-center justify-center gap-4">
+        <custom-button onclick="test('bg-green-600', event)">
+            Este es el botón de color verde
+        </custom-button>
+        <custom-button background-color="bg-red-600" onclick="test('bg-red-600', event)">
+            Este es el botón de color rojo
+        </custom-button>
+    </div>
+</body>
+</html>

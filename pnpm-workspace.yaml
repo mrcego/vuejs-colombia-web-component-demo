@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - esbuild
+
+packages:
+  - "packages/demo-lib"
+  - "playground"
